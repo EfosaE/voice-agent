@@ -1,0 +1,19 @@
+name: Trigger deploy repo sync
+
+on:
+  push:
+    branches:
+      - main   # source branch
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Repo B sync
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.DEPLOY_REPO_TOKEN }}" \
+            https://api.github.com/repos/Griffinxqi/voice-agent-sync/dispatches \
+            -d '{"event_type":"sync-from-main"}'
