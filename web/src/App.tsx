@@ -48,7 +48,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-deep-purple relative overflow-hidden">
+    <div className="min-h-screen bg-slate-100 relative overflow-hidden">
       {/* Animated background grid */}
       <div className="fixed inset-0 opacity-10 pointer-events-none">
         <div
@@ -69,7 +69,7 @@ function App() {
         <header className="mb-8 animate-fade-in">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h1 className="text-5xl font-display font-bold text-neon-green text-glow mb-2">
+              <h1 className="text-5xl font-display font-bold text-deep-purple text-glow mb-2">
                 VOICE_AGENT
               </h1>
               <p className="text-sm font-mono text-gray-400">
@@ -222,7 +222,7 @@ function App() {
 
               <button
                 onClick={clearEvents}
-                className="w-full py-3 rounded-lg font-display text-sm font-bold bg-red-900/30 hover:bg-red-900/50 text-red-400 border border-red-800/50 transition-all flex items-center justify-center gap-2">
+                className="w-full py-3 rounded-lg font-display text-sm font-bold bg-red-700 hover:bg-red-900/50 text-white border border-red-800/50 transition-all flex items-center justify-center gap-2">
                 <Trash2 className="w-4 h-4" />
                 CLEAR HISTORY
               </button>
